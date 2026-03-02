@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 180 10% 98%;
+    --foreground: 200 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 25% 10%;
+
+    --primary: 173 58% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 15% 95%;
+    --secondary-foreground: 200 25% 20%;
+
+    --muted: 180 10% 93%;
+    --muted-foreground: 200 10% 50%;
+
+    --accent: 173 58% 93%;
+    --accent-foreground: 173 58% 30%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 15% 90%;
+    --input: 180 15% 90%;
+    --ring: 173 58% 39%;
+
+    --radius: 0.625rem;
+
+    /* Appointment Status */
+    --status-pending: 38 92% 50%;
+    --status-pending-bg: 38 100% 95%;
+    --status-confirmed: 217 91% 60%;
+    --status-confirmed-bg: 217 91% 95%;
+    --status-completed: 160 84% 39%;
+    --status-completed-bg: 160 84% 95%;
+    --status-cancelled: 0 72% 51%;
+    --status-cancelled-bg: 0 72% 95%;
+
+    /* Risk Levels */
+    --risk-low: 160 84% 39%;
+    --risk-low-bg: 160 84% 95%;
+    --risk-medium: 38 92% 50%;
+    --risk-medium-bg: 38 100% 95%;
+    --risk-high: 25 95% 53%;
+    --risk-high-bg: 25 95% 95%;
+    --risk-critical: 0 72% 51%;
+    --risk-critical-bg: 0 72% 95%;
+
+    /* Sidebar */
+    --sidebar-background: 200 25% 10%;
+    --sidebar-foreground: 180 15% 80%;
+    --sidebar-primary: 173 58% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 200 25% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 200 25% 18%;
+    --sidebar-ring: 173 58% 45%;
+
+    /* Chart Colors */
+    --chart-1: 173 58% 39%;
+    --chart-2: 217 91% 60%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 280 67% 55%;
+    --chart-5: 0 72% 51%;
+
+    /* Semantic */
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 200 25% 7%;
+    --foreground: 180 10% 95%;
+    --card: 200 25% 10%;
+    --card-foreground: 180 10% 95%;
+    --popover: 200 25% 10%;
+    --popover-foreground: 180 10% 95%;
+    --primary: 173 58% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 25% 16%;
+    --secondary-foreground: 180 10% 95%;
+    --muted: 200 25% 16%;
+    --muted-foreground: 200 10% 60%;
+    --accent: 200 25% 16%;
+    --accent-foreground: 173 58% 60%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 25% 18%;
+    --input: 200 25% 18%;
+    --ring: 173 58% 45%;
+    --sidebar-background: 200 30% 5%;
+    --sidebar-foreground: 180 15% 80%;
+    --sidebar-primary: 173 58% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 200 30% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 200 30% 12%;
+    --sidebar-ring: 173 58% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-sm;
+  }
+}
